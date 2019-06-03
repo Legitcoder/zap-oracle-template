@@ -1,29 +1,36 @@
 {
 
-	"title": "Title",
-	"public_key": "Public key",
-	"NODE_URL": "wss://mainnet.infura.io/ws/v3/63dbbe242127449b9aeb061c6640ab95",
-	"mnemonic": "",
+	"title": "MoinZap",
+	"public_key": "abcedf",
+	"NODE_URL": "wss://kovan.infura.io/ws/xeb916AFjrcttuQlezyq",
+	"mnemonic": "insert mnemonic here",
 	"STATUS_URL":"",
 	"EndpointSchema": {
-		"name": "",
+		"name": "Pokemon API",
 		"curve": [2,
-			5000000000000000000,
-			2000000000000000000,
+			5,
+			2,
 			1000,
 			2,
 			0,
-			3000000000000000000,
+			3,
 			1000000000000000000
 		],
 		"broker": "",
 		"md": "Adding description for your Oracle here",
 		"queryList": [{
-			"query": "Query string that your Oracle will accept",
-			"params": [],
+			"query": "getWeight",
+			"params": ["{name}"],
+			"dynamic": false,
+			"responseType": "[String]"
+		},
+		{
+			"query": "getHp",
+			"params": ["{name}"],
 			"dynamic": false,
 			"responseType": "[int]"
-		}]
+		}
+		]
 	}
 
 }
