@@ -4,7 +4,7 @@ const Web3 = require('web3');
 import { ZapProvider } from "@zapjs/provider";
 import {ZapToken} from "@zapjs/zaptoken"
 const HDWalletProviderMem = require("truffle-hdwallet-provider");
-const {toBN,fromWei, hexToUtf8} =require("web3-utils");
+const {toBN,fromWei, hexToUtf8} = require("web3-utils");
 const assert = require("assert")
 const IPFS = require("ipfs-mini")
 const ipfs = new IPFS({host:'ipfs.infura.io',port:5001,protocol:'https'})
@@ -140,6 +140,9 @@ export  class ZapOracle {
         const accounts: string[] = await this.web3.eth.getAccounts();
         if (accounts.length == 0) throw('Unable to find an account in the current web3 provider, check your Config variables');
         const owner: string = accounts[0];
+        console.log(accounts[0])
+        //console.log(await this.web3.eth.net.getId())
+        //console.log(this.web3.currentProvider)
         this.oracle = new ZapProvider(owner, {
             networkId: (await this.web3.eth.net.getId()).toString(),
             networkProvider:this.web3.currentProvider
