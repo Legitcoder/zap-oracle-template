@@ -6,7 +6,7 @@
     "STATUS_URL": "",
     "EndpointSchema": {
         "name": "Asset Market",
-        "curve": [1,1,1000000000000000000],
+        "curve": [1,0,1000000000000000000],
         "broker": "0x0000000000000000000000000000000000000000",
         "md": "Adding description for your Oracle here",
         "queryList": [{
